@@ -17,8 +17,7 @@ script : |
   sudo apt-get update
   sudo apt-get install bzr
   sudo apt-get install mercurial
-  sudo apt-cache search libpcap
-  sudo apt-get install libpcap
+  sudo apt-get install libpcap-dev
   wget http://golang.org/dl/go${version}.linux-amd64.tar.gz
   sudo tar -C /usr/local -xzf go${version}.linux-amd64.tar.gz
   echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee -a /etc/profile
