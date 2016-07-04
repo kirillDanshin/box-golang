@@ -2,3 +2,11 @@ box: wercker/default
 build:
   steps:
     - validate-wercker-box
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $DOCKER_LOGIN
+        password: $DOCKER_PASS
+        tag: latest
+        repository: kirilldanshin/golang
+        registry: https://registry.hub.docker.com
