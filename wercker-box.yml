@@ -79,3 +79,11 @@ default-build:
               name: go test
               code: |
                 go test ./...
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $DOCKER_LOGIN
+        password: $DOCKER_PASS
+        tag: latest
+        repository: kirilldanshin/golang
+        registry: https://registry.hub.docker.com
