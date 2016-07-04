@@ -79,6 +79,7 @@ default-build:
               name: go test
               code: |
                 go test ./...
+
 deploy:
   steps:
     - internal/docker-push:
